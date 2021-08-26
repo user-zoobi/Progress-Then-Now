@@ -1,0 +1,226 @@
+fun age(number:Int):Int{
+     when {
+  number >2 -> print("The age of person infant ")
+  number > 12 ->  print("The age of person midage ")
+  number > 20 -> print("The age of person is adult")
+  else ->  print("Hello")
+          
+}
+     return number
+}
+
+fun main(){
+ val age_person = age(20)
+ println(age_person)
+}
+
+
+fun age(number:Int):String{
+    
+    var result = "" 
+    when{
+       
+        number>10 -> result = "age is > 5"
+        number>20 -> result = "age is > 10"
+        number>30 -> result = "age is > 20"
+        number>40 -> result = "age is > 30"
+        else -> result = "not in condition"
+    }
+    return result
+}
+
+class Function1(){
+    
+	fun add(number1:Int, number2:Int):Int{
+        var num_add = number1 + number2
+        return num_add
+    }  
+    
+    fun sub(number3:Int, number4:Int):Int{
+        var num_sub = number3 - number4
+        return num_sub
+    }
+    
+    fun multiply(number5:Int, number6:Int):Int{
+        var num_mul = number5 * number6
+        return num_mul
+    }
+    
+    fun divide(number7:Int, number8:Int):Int{
+        var num_div = number7 / number8
+        return num_div
+    }
+}
+
+fun main(){
+   var function = Function1()
+   println(function.add(1,2))
+   println(function.sub(10,5))
+   println(function.multiply(2,3))
+   println(function.divide(8,5))
+}
+
+
+Create class, SimpleSpice.
+Let the class be a property with a String for the name of the spice, and a String for the level of spiciness.
+Set the name to curry and the spiciness to mild.
+Using a string for spiciness is nice for users, but not useful for calculations. Add a heat property to your class with a getter that returns a numeric value for spiciness. Use a value of 5 for mild.
+Create an instance of SimpleSpice and print out its name and heat.
+
+
+
+
+
+
+
+
+
+
+
+
+fun weekend(days:Int):String{
+    val week_days = arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    return week_days[days]
+}
+fun main(){
+  var day = weekend()
+  
+  var routine = routines(day)
+ 
+  println("The food is ${day} and day is ${routine}")
+}
+
+
+fun routines(day:String):String{
+     return when(day){
+        "Monday" -> "food1"
+        "Tuesday" -> "food2"
+        "Wednesday" -> "food3"
+        "Thursday" -> "food4"
+        "Friday" -> "food5"
+        "Saturday" -> "food6"
+        "Sunday" -> "food7"
+         else-> " nothing"
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fun weekend_days(days:Int):String{
+    val week_days = arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    return week_days[days]
+}
+fun main(){
+  var day = weekend_days(5)
+  
+  var routine = routines(day)
+ 
+  println("The food is ${routine} and day is ${day}")
+}
+
+
+fun routines(day:String):Int{
+     return when(day){
+        "Monday" -> 0
+        "Tuesday" -> 1
+        "Wednesday" -> 2
+        "Thursday" -> 3
+        "Friday" -> 4
+        "Saturday" -> 5
+        "Sunday" -> 6
+         else -> 0
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Person(p_name:String, p_age:Int, p_number:Int){
+    
+    var name:String = ""
+    var age:Int = 0
+    var number:Int = 0
+    
+    init{ 
+        if(p_name == "a" &&
+           p_age == 0 &&
+        p_number == 0 ){  
+          
+        name = "Zohaib"
+        age = 10
+        number = 11    
+            
+   		 }
+        else{
+           name = p_name
+           age = p_age
+           number = p_number
+       }   
+      
+    }
+}
+
+fun main(){
+    val p = Person("b",10,10)
+    println("first ${p.name} second ${p.age} third ${p.number}")
+}
+
+
+
+
+
+
+
+
+
+
+

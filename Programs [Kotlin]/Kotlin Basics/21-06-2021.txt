@@ -1,0 +1,206 @@
+//First code 
+
+interface Progress_measures{
+   fun deal1(value1:String, value2:String){
+       println("The value is ${value1} and ${value2}")
+         
+   }
+   
+    fun deal3(value4:Int, value5:Int, value6:String)
+}
+
+interface Analysis:Progress_measures{
+   fun deal1( value1:String, value2:String, value3:Int){
+         println("The value is ${value1} and ${value2}")
+         deal3(23,34,"Hello")
+   }
+   
+  override fun deal3(value4:Int, value5:Int, value6:String){
+        println("${value4}  ${value5}  ${value6}")
+    } 
+}
+
+class Print: Analysis{
+ 
+}
+
+fun main(){
+    val c = Print()
+    c.deal1("Hello","Heello",22)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Code 2
+
+interface Progress_measures{
+   fun deal1(value1:String, value2:String){
+       println("The value is ${value1} and ${value2}")
+   }
+}
+interface Analysis{
+   fun deal1( value1:String, value2:String, value3:Int){
+         println("The value is ${value1} and ${value2}")
+         deal3(23,34,"Hello")
+   }
+   
+   fun deal3(value4:Int, value5:Int, value6:String)
+      
+   
+}
+
+class Print:Progress_measures, Analysis{
+    override fun deal3(value4:Int, value5:Int, value6:String){
+        println("${value4}  ${value5}  ${value6}")
+    }
+  
+}
+
+fun main(){
+    val c = Print()
+    c.deal1("Hello","Heello",22)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface function1{
+    fun sum1(parameter1:Int, parameter2:Int){
+        
+    }
+}
+
+interface function2:function1{
+    
+}
+
+class Functions:function2{
+    
+}
+
+fun main(){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface Class1{
+   fun message1(value1:Int, value2:Int)
+}
+
+interface Class2:Class1{
+    override fun message1(value1:Int, value2:Int){
+        var sum = value1 + value2
+        sum1(sum)
+    }
+    
+    fun sum1(result:Int)
+}
+
+class Implement:Class2{
+  override fun sum1(result:Int){
+   println(result)
+    }  
+}
+
+fun main(){
+    val obj = Implement()
+    obj.message1(2,3)
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface function1{
+    fun sum1(parameter1:Int, parameter2:Int)
+}
+
+interface function2:function1{
+    override fun sum1(parameter1:Int, parameter2:Int){
+        var sum = parameter1 + parameter2
+        result1(sum)
+    }
+    
+    fun result1(result:Int)
+}
+
+class Functions:function2{
+    override fun result1(result:Int){
+        println(result)
+    }
+}
+
+fun main(){
+    val obj = Functions()
+    obj.sum1(2,3)
+}
+

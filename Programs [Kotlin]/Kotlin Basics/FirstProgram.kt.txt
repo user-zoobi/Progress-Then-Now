@@ -1,0 +1,26 @@
+fun diet_plan( days:Int):String{
+	
+val list1 = listOf("fish","prawn","lobster","burger","fries","sandwich","juice")
+return list1[days]
+
+}
+
+fun week_days( day:String):String{
+
+val list2 = listOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+return list2[0]
+
+}
+
+fun main(){
+  
+var food_input = diet_plan(6)
+var week_input = week_days(food_input)
+
+println("Today is ${week_input} and I will eat ${food_input}")
+
+}
+
+
+
+https://www.vogella.com/tutorials/AndroidFragments/article.html#fragments-and-context-access

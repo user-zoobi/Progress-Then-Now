@@ -1,0 +1,188 @@
+//two interfaces in single class
+
+
+interface Kotlin{
+    var var_str:String
+    var var_int:Int
+}
+
+interface Java{
+    var var_com:String
+    var var_run:Int
+}
+
+class Compiler:Kotlin, Java{
+    override var var_str:String = "Hello"
+    override var var_int:Int = 23
+    override var var_com:String = "Input1"
+    override var var_run:Int = 34
+}
+
+fun main(){
+    val obj = Compiler()
+    println("${obj.var_str}")
+    println("${obj.var_int}")
+    println("${obj.var_com}")
+    println("${obj.var_run}")
+}
+
+
+
+
+
+
+
+//Donot running code
+
+interface Progress_measures{
+   fun deal1(value1:String, value2:String){
+       println("The value is ${value1} and ${value2}")
+   }
+}
+interface Analysis{
+   fun deal1( value1:String, value2:String, value3:Int){
+         println("The value is ${value1} and ${value2}")
+   }
+}
+
+class Print:Progress_measures, Analysis{
+  override fun deal1(){
+      super<Progress_measures>.deal1()
+      super<Analysis>.deal1()
+  }
+}
+
+fun main(){
+    val c = Print()
+    c.deal1("Hello","Heello",22)
+}
+
+
+
+
+
+
+
+
+
+//Overriding and calling base interface in class
+
+interface Kotlin{
+    var var_str:String
+    var var_int:Int
+}
+
+interface Java:Kotlin{
+    var var_com:String
+    var var_run:Int
+}
+
+class Compiler:Java{
+    override var var_str:String = "Hello"
+    override var var_int:Int = 23
+    override var var_com:String = "Input1"
+    override var var_run:Int = 34
+}
+
+fun main(){
+    val obj = Compiler()
+    println("${obj.var_str}")
+    println("${obj.var_int}")
+    println("${obj.var_com}")
+    println("${obj.var_run}")
+}
+
+
+
+
+
+
+
+//Function with parameter in interface 
+
+interface Kotlin{
+    fun use_int( str_int:Int)
+}
+interface Java:Kotlin{
+    fun use_string( str_string:String)
+}
+class Code_Run:Java{
+    override fun use_int( str_int:Int){
+        println("The value of input is ${str_int}")
+    }
+    override fun use_string( str_string:String){
+        println("The value of input is ${str_string}")
+    }
+}
+
+fun main(){
+    val obj = Code_Run()
+    obj.use_int(20)
+    
+    obj.use_string("Hello")
+}
+
+
+
+Access Modifiers
+
+
+class Kotlin{
+    protected var kotlin:Int = 23
+    protected fun java(){
+        println("Hello")
+    }
+}
+
+class Python{
+    var pandas:Int = 23
+    fun numpy(){
+        println("Hello")
+    }
+    
+}
+
+fun main(){
+    val obj = Kotlin()
+    val obj1 = Python()
+    obj1.numpy()
+      
+}
+
+
+
+
+
+
+
+
+
+
+interface Using same functions
+
+
+interface A{
+    
+ public fun method(){
+     println("Hello")
+ }
+}
+
+interface B{
+    public fun method(){
+        println("Hello2")
+    }
+}
+
+class C : A,B{
+    override fun method(){
+        
+        super<A>.method()
+        super<B>.method()
+    }
+}
+
+fun main(){
+    val obj = C()
+    obj.method()
+}

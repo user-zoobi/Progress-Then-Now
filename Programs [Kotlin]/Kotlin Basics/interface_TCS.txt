@@ -1,0 +1,82 @@
+// making simple interface and initialize in a single class
+
+interface Class1{
+    var loop1:String
+     var loop2:Int
+    
+}
+
+interface Class2{
+    var loop3:String
+    var loop4:Int
+}
+
+class Process: Class1, Class2{
+    override var loop1:String = "print line 1"
+    override var loop2:Int = 90
+    override var loop3:String = "print line 2"
+    override var loop4:Int = 100
+}
+
+fun main(){
+    var c = Process()
+   println("${c.loop1}") 
+   println("${c.loop2}") 
+   println("${c.loop3}") 
+   println("${c.loop4}") 
+}
+
+
+
+
+
+
+
+// making double interface and initializing in one class
+
+interface Economics{
+    fun warranty_expense()
+    fun profits()
+    var loss_deficit:Int
+    
+  
+}
+
+interface Accounting{
+    fun revenue()
+    fun customer_value()
+    var loss_percent:Int
+}
+
+class Supply_Quality_System : Economics, Accounting{
+    
+    override var loss_deficit:Int = 50
+    override var loss_percent:Int = 20
+    
+    override fun warranty_expense(){
+       println("The value of ${loss_deficit} and ${loss_percent}") 
+    }
+    
+    override fun profits(){
+        var total = loss_deficit + loss_percent
+        println(total) 
+    }
+    
+    override fun revenue(){
+        println("${loss_deficit}") 
+    }
+    
+    override fun customer_value(){
+        println("${loss_percent}") 
+    }
+    
+}
+
+fun main(){
+    
+    var a = Supply_Quality_System()
+    a.warranty_expense()
+    a.profits()
+    a.revenue()
+    a.customer_value()
+}
